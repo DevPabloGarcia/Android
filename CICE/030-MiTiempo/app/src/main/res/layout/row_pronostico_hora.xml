@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    android:layout_margin="0dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view_icono"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:text="Fecha"
+            android:id="@+id/text_view_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_view_icono"
+            android:layout_toEndOf="@id/image_view_icono"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:text="Hora"
+            android:id="@+id/text_view_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_fecha"
+            android:layout_toRightOf="@+id/image_view_icono"
+            android:layout_toEndOf="@id/image_view_icono"
+            android:layout_margin="8dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:text="Texto"
+            android:id="@+id/text_view_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_view_fecha"
+            android:layout_toEndOf="@id/text_view_fecha"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:text="90"
+            android:id="@+id/text_view_temperatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_texto"
+            android:layout_toRightOf="@+id/text_view_fecha"
+            android:layout_toEndOf="@id/text_view_fecha"
+            android:layout_margin="8dp"
+            android:textSize="18sp"/>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

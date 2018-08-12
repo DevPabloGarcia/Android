@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="hola">Hola!</string>
+    <string-array name="array">
+        <item>Pablo Garcia</item>
+        <item>Carlos Garcia</item>
+        <item>Victoria Garcia</item>
+        <item>Felix Garcia</item>
+        <item>Clara Iglesias</item>
+        <item>Marina Iglesias</item>
+        <item>Pedro Iglesias</item>
+        <item>Marisol Huertas</item>
+        <item>Juan Lebron</item>
+        <item>Javier Perez</item>
+        <item>Maria Fernandez</item>
+        <item>Carmen Lomana</item>
+    </string-array>
+</resources>

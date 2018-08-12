@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dialogs</string>
+    <string name="showDialog">Muestra el Dialog</string>
+    <string name="showDialogInfo">MUESTRA EL DIALOG INFO</string>
+    <string name="user">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="cancel">Cancel</string>
+    <string name="login">Login</string>
+    <string name="showLoginDialog">Muestra Login Dialog</string>
+</resources>

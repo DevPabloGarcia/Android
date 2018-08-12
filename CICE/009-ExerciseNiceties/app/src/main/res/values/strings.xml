@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExerciseNiceties</string>
+    <string name="explainText">We will never post anything on your behalf</string>
+    <string name="emailText">You can also use your email to</string>
+    <string name="logFacebook">LOG IN WITH FACEBOOK</string>
+    <string name="logGoogle">LOG IN WITH GOOGLE</string>
+    <string name="privacyPolicy">View our Privacy Policy and Terms of Use</string>
+    <string name="signIn">SIGN IN</string>
+    <string name="logIn">LOG IN</string>
+</resources>

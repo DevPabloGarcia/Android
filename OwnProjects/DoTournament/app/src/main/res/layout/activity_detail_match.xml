@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="pablogarcia.dotournament.activity.detail.DetailMatchActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="2dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true"
+            android:layout_above="@+id/card_view_button">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <fragment
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:id="@+id/map_fragment"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/text_view_sport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:textSize="@dimen/text_giant"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/text_view_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_margin="@dimen/margin_normal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="@string/init_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:layout_marginBottom="@dimen/margin_normal"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:layout_marginLeft="@dimen/margin_normal"/>
+
+                        <TextView
+                            android:id="@+id/text_view_init_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_margin="@dimen/margin_normal"/>
+
+                        <TextView
+                            android:text="@string/end_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:layout_marginBottom="@dimen/margin_normal"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_view_end_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_margin="@dimen/margin_normal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="@string/owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/text_view_creator_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:textSize="@dimen/text_normal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="@string/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/text_view_creator_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:textSize="@dimen/text_normal"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/players"
+                        android:textSize="@dimen/text_normal"
+                        android:layout_margin="@dimen/margin_normal"
+                        android:textStyle="bold"/>
+
+                    <include layout="@layout/recycler_view"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardPreventCornerOverlap="true">
+
+            <Button
+                android:id="@+id/button_join_quite_to_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/join_match"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:onClick="onClickJoin"/>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ButterKnife</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="dni">DNI</string>
+    <string name="nick">Nick</string>
+    <string name="direccion">Dirección</string>
+    <string name="ranking">Ranking Inicial</string>
+    <string name="email">Email</string>
+    <string name="edad">Edad</string>
+</resources>

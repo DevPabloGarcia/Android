@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Do Tournament</string>
+    <string name="matchs">Partidos</string>
+    <string name="players">Jugadores</string>
+    <string name="settings">Configuración</string>
+    <string name="sports">Deportes</string>
+    <string name="name">Nombre</string>
+    <string name="password">Contraseña</string>
+    <string name="repeat_password">Repetir Contraseña</string>
+    <string name="admin">Administrador</string>
+    <string name="date">Fecha del partido</string>
+    <string name="init_time">Inicio</string>
+    <string name="end_time">Final</string>
+    <string name="user">Jugador</string>
+    <string name="mail">Email</string>
+    <string name="surname">Apellidos</string>
+    <string name="num_players">Num Jugadores</string>
+    <string name="add">Añadir</string>
+    <string name="create">Crear</string>
+    <string name="save">Guardar</string>
+    <string name="user_detail">Detalles Jugador</string>
+    <string name="add_sport">Añadir Deporte</string>
+    <string name="add_match">Añadir Partido</string>
+    <string name="tournament_description">Descripcion del torneo</string>
+    <string name="sport_description">Descripcion del Deporte</string>
+    <string name="sport">Deporte</string>
+    <string name="log_in">Acceder</string>
+    <string name="sign_in">Registrar</string>
+    <string name="log_out">Salir</string>
+    <string name="user_name">User Name</string>
+    <string name="join_match">Unirse</string>
+    <string name="match_full">Partido Completo</string>
+    <string name="remove_from_match">Dejar</string>
+    <string name="owner">Creador:</string>
+    <string name="email">Email:</string>
+    <string name="day">Día</string>
+    <string name="share_app">Unete a la comunidad del deporte! ¿Echamos un partido?</string>
+
+    <string name="toolbar_title_join_match">Unirse al Partido</string>
+
+    <string name="tab_title_in_game">En Juego</string>
+    <string name="tab_title_finished">Finalizado</string>
+
+    <string name="progress_log_in_title">Entrando...</string>
+    <string name="progress_log_in_message">Estamos comprobando tu Nombre y contraseña</string>
+    <string name="progress_sign_in_title">Creando...</string>
+    <string name="progress_sign_in_message">Estamos creando la cuenta, por favor espera</string>
+    <string name="progress_create_match_title">Creando Partido</string>
+    <string name="progress_create_match_message">Estamos creando el partido, por favor espera...</string>
+
+    <string name="log_user_logged">Usuario loggeado correctamente</string>
+    <string name="log_user_singed">Usuario creado correctamente</string>
+    <string name="log_create_sport">Deporte creado correctamente:</string>
+
+    <string name="empty_field_error">Este campo no puede estar vacío</string>
+    <string name="wrong_time_error">La hora final incorrecta, no puede ser menor. </string>
+    <string name="wrong_pass_error">Las contraseñas no coinciden</string>
+    <string name="wrong_pass">Contraseña Invalida</string>
+
+    <string name="empty_description_exception">La descripción no puede estar vacía</string>
+    <string name="empty_name_exception">El nombre no puede estar vacío</string>
+    <string name="empty_surname_exception">El apellido no puede estar vacío</string>
+    <string name="empty_mail_exception">El mail no puede estar vacío</string>
+    <string name="empty_pass_exception">La contraseña no puede estar vacía</string>
+    <string name="wrong_pass2_exception">Las contraseñas no coinciden</string>
+    <string name="sport_exists_exception">El deporte que intentas añadir ya existe.</string>
+    <string name="tournmante_exists_exception">El torneo que intentas añadir ya existe.</string>
+    <string name="user_exists_exception">El jugador que intentas añadir ya existe.</string>
+    <string name="database_exception">Error en la base de datos</string>
+
+    <string name="exception_insert_sport">No se ha podido insertar el deporte</string>
+    <string name="exception_get_sport">No se ha podido recoger el deporte</string>
+
+    <string name="toast_match_inserted">Partido creado correctamente</string>
+    <string name="date_text">Fecha:</string>
+    <string name="init_text">Inicio:</string>
+    <string name="end_text">Fin</string>
+    <string name="underscore">-</string>
+    <string name="default_date">00-00-0000</string>
+    <string name="default_time">00:00</string>
+    <string name="available_sites">Sitios disponibles:</string>
+    <string name="select_place">Selecciona un Sitio</string>
+    <string name="address">Dirección:</string>
+    <string name="contact">Contactar</string>
+    <string name="social">Redes Sociales</string>
+
+
+</resources>

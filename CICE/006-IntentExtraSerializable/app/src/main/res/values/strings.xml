@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IntentExtraSerializable</string>
+    <string name="pulsa">Pulsa!</string>
+    <string name="marca">Marca</string>
+    <string name="modelo">Modelo</string>
+    <string name="km">km</string>
+</resources>
