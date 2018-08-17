@@ -104,7 +104,7 @@ public class Image implements Comparable<Image>, Parcelable{
      * Get the image full path
      * @return
      */
-    public String getImgePath(){
+    public String getImagePath(){
         return Consts.IMAGES_PATH.concat(this.id.toString());
     }
 

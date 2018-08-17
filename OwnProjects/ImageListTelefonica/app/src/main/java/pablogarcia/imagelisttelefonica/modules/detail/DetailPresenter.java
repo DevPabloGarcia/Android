@@ -1,6 +1,9 @@
 package pablogarcia.imagelisttelefonica.modules.detail;
 
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import pablogarcia.imagelisttelefonica.model.Image;
 
 public class DetailPresenter implements DetailInteractor.OnDetailListener{
 
@@ -14,6 +17,10 @@ public class DetailPresenter implements DetailInteractor.OnDetailListener{
 
     public void onOptionItemSelected(MenuItem item){
         this.detailInteractor.onOptionItemSelected(item, this);
+    }
+
+    public void updateImage(Image image, ImageView imageView){
+        this.detailInteractor.updateImage(image, imageView);
     }
 
     @Override

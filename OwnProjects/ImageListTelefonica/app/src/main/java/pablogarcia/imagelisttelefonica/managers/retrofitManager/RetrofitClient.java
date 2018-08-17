@@ -8,6 +8,11 @@ public class RetrofitClient {
 
     private static Retrofit retrofit = null;
 
+    /**
+     * Create the client withe the url passed
+     * @param baseUrl - the url with the json response
+     * @return the instance
+     */
     public static Retrofit getClient(String baseUrl){
         if(retrofit == null) {
             retrofit = new Retrofit.Builder()

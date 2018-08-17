@@ -29,6 +29,13 @@ public class MainInteractor {
         void onFailure();
     }
 
+    /**
+     * Setup the recycler view
+     * @param recyclerView - The recyclerview to setup
+     * @param images - The image list
+     * @param context - The context in order to create the layout
+     * @param listener - The callback implementation
+     */
     public void setupRecyclerView(RecyclerView recyclerView, ArrayList<Image> images, Context context, OnClickImageRow listener){
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(listener);
@@ -38,12 +45,18 @@ public class MainInteractor {
 
     }
 
+    /**
+     * Get the image list from the services
+     * @param mListener
+     */
     public void getImageList(final OnImageListCallback mListener){
-
+        // Create an api service isntance
         ApiService apiService = ApiManager.getApiService(Consts.IMAGES_URL);
+        // Call the service
         apiService.imageList().enqueue(new Callback<ArrayList<Image>>() {
             @Override
             public void onResponse(Call<ArrayList<Image>> call, Response<ArrayList<Image>> response) {
+                // Sort the data
                 ArrayList<Image> images = response.body();
                 Collections.sort(images);
                 mListener.onSuccess(images);
@@ -54,7 +67,6 @@ public class MainInteractor {
                 mListener.onFailure();
             }
         });
-
     }
 
 }
