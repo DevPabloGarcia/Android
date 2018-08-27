@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Meet Up</string>
+
+    <string name="userLogin">User Name</string>
+    <string name="userPass">Password</string>
+    <string name="loginButton">Login</string>
+    <string name="notRegistered">Not registered yet?</string>
+    <string name="buttonRegister">Register</string>
+
+    <string name="tabCurrent">Proximos</string>
+    <string name="tabFinished">Terminados</string>
+    <string name="dateSeparate">-</string>
+    <string name="invite_friends">Invite Friends</string>
 </resources>
