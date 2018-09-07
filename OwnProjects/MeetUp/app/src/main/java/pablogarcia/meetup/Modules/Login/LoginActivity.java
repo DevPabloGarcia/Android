@@ -17,9 +17,6 @@ import pablogarcia.meetup.R;
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
 
-
-    // Rama 1
-
     private LoginPresenter loginPresenter;
     private CallbackManager callbackManager;
 
