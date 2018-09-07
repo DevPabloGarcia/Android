@@ -3,13 +3,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/events"
-            android:title="Eventos"
-            android:checked="true"/>
+            android:title="@string/meets"
+            android:checked="true"
+            android:icon="@drawable/ic_event"/>
+        <item
+            android:id="@+id/account"
+            android:title="@string/my_account"
+            android:icon="@drawable/ic_account_circle"/>
+
         <item
             android:id="@+id/settings"
-            android:title="Settings"/>
+            android:title="@string/settings"
+            android:icon="@drawable/ic_settings"/>
+    </group>
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
         <item
             android:id="@+id/logOut"
-            android:title="Log out"/>
+            android:title="@string/log_out"
+            android:icon="@drawable/ic_action_exit"/>
     </group>
 </menu>

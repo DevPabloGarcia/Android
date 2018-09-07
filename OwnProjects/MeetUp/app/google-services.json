@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "292149520107",
+    "firebase_url": "https://meetup-5f4d2.firebaseio.com",
+    "project_id": "meetup-5f4d2",
+    "storage_bucket": "meetup-5f4d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292149520107:android:7ab1d1d34ceb2fdf",
+        "android_client_info": {
+          "package_name": "pablogarcia.meetup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292149520107-rkta6bh12eqffa3aqn69ld15ijramilb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzV2cN4xsUU1Trd0ketAeWszAKhzuEEMc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

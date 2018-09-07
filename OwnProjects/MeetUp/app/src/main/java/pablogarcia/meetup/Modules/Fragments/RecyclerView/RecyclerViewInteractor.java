@@ -6,11 +6,14 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import pablogarcia.meetup.ApiManager;
+import pablogarcia.meetup.Managers.DatabaseManager.OnDatabaseGetListener;
 import pablogarcia.meetup.Managers.RecyclerViewManager.OnClickMeetRow;
 import pablogarcia.meetup.Managers.RecyclerViewManager.RecyclerViewAdapter;
 import pablogarcia.meetup.Model.Meet;
 
-public class RecyclerViewInteractor {
+public class RecyclerViewInteractor implements OnDatabaseGetListener{
+
 
     public interface OnRecyclerViewCallback{
 
@@ -18,11 +21,21 @@ public class RecyclerViewInteractor {
 
     private RecyclerViewAdapter recyclerViewAdapter;
 
-    public void onCreateView(RecyclerView recyclerView, Context context, ArrayList<Meet> meets, OnClickMeetRow listener){
+    public void onCreateView(RecyclerView recyclerView, Context context, boolean currentMeets, OnClickMeetRow listener){
         this.recyclerViewAdapter  = new RecyclerViewAdapter(listener);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerViewAdapter.setDataSet(meets);
+        if(currentMeets){
+            ApiManager.getInstance().getCurrentMeets(this);
+        }else{
+            ApiManager.getInstance().getFinishedMeets(this);
+        }
     }
+
+    @Override
+    public void onGetSuccess(ArrayList<Meet> meets) {
+        this.recyclerViewAdapter.setDataSet(meets);
+    }
+
 
 }

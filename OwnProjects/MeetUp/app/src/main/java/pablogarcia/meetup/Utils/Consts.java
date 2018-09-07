@@ -1,6 +1,12 @@
 package pablogarcia.meetup.Utils;
 
-public class Consts {
+public interface Consts {
 
-    public static String MEET_KEY = "MEET_EXTRA";
+    String MEET_KEY = "MEET_EXTRA";
+
+    int REQ_GALLERY = 1;
+    int REQ_CAMERA = 2;
+    int REQ_PLACE = 3;
+
+
 }

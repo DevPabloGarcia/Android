@@ -1,32 +1,43 @@
 package pablogarcia.meetup.Modules.Login;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Toast;
+
+import com.facebook.CallbackManager;
+import com.facebook.login.widget.LoginButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import pablogarcia.meetup.Managers.AuthManager.AuthManager;
 import pablogarcia.meetup.Modules.Main.MainActivity;
 import pablogarcia.meetup.R;
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
 
-    @BindView(R.id.userName) EditText userName;
-    @BindView(R.id.userPass) EditText userPass;
-    @BindView(R.id.userNameInputLayout) TextInputLayout userNameLayout;
-    @BindView(R.id.userPassInputLayout) TextInputLayout userPassLayout;
-
     private LoginPresenter loginPresenter;
+    private CallbackManager callbackManager;
+
+    @BindView(R.id.facebook_login_button) LoginButton facebookLoginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Bind the xml views
         ButterKnife.bind(this);
-        loginPresenter = new LoginPresenter(new LoginInteractor(), this);
+
+        // Create an instance for login presenter
+        this.loginPresenter = new LoginPresenter(this);
+
+        // Setup the facebook login button
+        this.setupFacebookLoginButton();
+
+        // Check if the user is logged
+        this.loginPresenter.checkUserLogged();
     }
 
     @Override
@@ -34,27 +45,60 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         super.onDestroy();
     }
 
-    public void onClickButtonLogin(View view){
-        loginPresenter.login(userName.getText().toString(), userPass.getText().toString());
-    }
-
+    /**
+     * Navigate to the main activity
+     */
     @Override
     public void navigateMainActivity() {
+        // Create a new intent instance
         Intent intent = new Intent(this, MainActivity.class);
+        // Navigate to the main activity
         startActivity(intent);
+        // Show a translate animation
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        finish();
     }
 
+    /**
+     * Show a Toast message
+     * @param message
+     */
     @Override
-    public void showUserNameError() {
-        userNameLayout.setErrorEnabled(true);
-        userNameLayout.setError("Error");
+    public void showToastMessage(String message){
+        // Check if there is message to show
+        if(!message.equals("")){
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        }
     }
 
+    /**
+     * Setup the facebook login
+     */
     @Override
-    public void showUserPassError() {
-        userPassLayout.setErrorEnabled(true);
-        userPassLayout.setError("Error");
+    public void setupFacebookLoginButton(){
+        this.callbackManager = CallbackManager.Factory.create();
+        this.facebookLoginButton.setReadPermissions("email", "public_profile");
+        this.facebookLoginButton.registerCallback(this.callbackManager, new AuthManager(this.loginPresenter));
     }
+
+    /**
+     * Get the callback from facebook webview.
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        this.callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
+
+    /**
+     * Called when the user clicks on the login button
+     * @param view
+     */
+    public void onClickButtonLogin(View view){
+        // Navigate to the next view
+        this.navigateMainActivity();
+    }
+
 }

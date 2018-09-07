@@ -1,5 +1,6 @@
 package pablogarcia.meetup.Modules.Fragments.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -24,17 +25,16 @@ import pablogarcia.meetup.Utils.Consts;
 
 public class RecyclerViewFragment extends Fragment implements RecyclerViewView, OnClickMeetRow{
 
-    private static final String MEET_ARGS = "MEET";
-
     private RecyclerViewPresenter recyclerViewPresenter;
+    private static String QUERY_ARGS = "IS_CURRENT";
 
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
 
-    public static RecyclerViewFragment newInstance(ArrayList<Meet> meets) {
+    public static RecyclerViewFragment newInstance(boolean currentMeets) {
         
         Bundle args = new Bundle();
 
-        args.putParcelableArrayList(MEET_ARGS, meets);
+        args.putBoolean(QUERY_ARGS, currentMeets);
         RecyclerViewFragment fragment = new RecyclerViewFragment();
 
         fragment.setArguments(args);
@@ -47,8 +47,12 @@ public class RecyclerViewFragment extends Fragment implements RecyclerViewView, 
         View view = inflater.inflate(R.layout.fragment_recycler_view, container, false);
 
         ButterKnife.bind(this, view);
+
+        Context context = container.getContext();
+        boolean currentMeets = getArguments().getBoolean(QUERY_ARGS);
+
         this.recyclerViewPresenter = new RecyclerViewPresenter(this, new RecyclerViewInteractor());
-        this.recyclerViewPresenter.onCreateView(this.recyclerView, container.getContext(), getArguments().<Meet>getParcelableArrayList(MEET_ARGS), this);
+        this.recyclerViewPresenter.onCreateView(this.recyclerView, context, currentMeets, this);
 
         return view;
     }

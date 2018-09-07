@@ -26,12 +26,10 @@ public class MeetListInteractor {
 
     public void setupViewPager(ViewPager viewPager, FragmentManager fm){
 
-        ArrayList<Meet> meets = LocalRepository.createExampleMeets();
-
         ArrayList<Fragment> fragments = new ArrayList<>();
 
-        RecyclerViewFragment fragmentCurrent = RecyclerViewFragment.newInstance(meets);
-        RecyclerViewFragment fragmentFinished = RecyclerViewFragment.newInstance(meets);
+        RecyclerViewFragment fragmentCurrent = RecyclerViewFragment.newInstance(true);
+        RecyclerViewFragment fragmentFinished = RecyclerViewFragment.newInstance(false);
 
         fragments.add(fragmentCurrent);
         fragments.add(fragmentFinished);

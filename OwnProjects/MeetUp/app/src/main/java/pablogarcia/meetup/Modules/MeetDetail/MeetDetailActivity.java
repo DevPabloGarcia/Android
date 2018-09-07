@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -15,7 +18,7 @@ import pablogarcia.meetup.Model.Meet;
 import pablogarcia.meetup.R;
 import pablogarcia.meetup.Utils.Consts;
 
-public class MeetDetailActivity extends AppCompatActivity implements MeetDetailView, ViewPager.OnPageChangeListener {
+public class MeetDetailActivity extends AppCompatActivity implements MeetDetailView, ViewPager.OnPageChangeListener, View.OnClickListener {
 
     private Meet meet;
 
@@ -23,6 +26,10 @@ public class MeetDetailActivity extends AppCompatActivity implements MeetDetailV
     @BindView(R.id.viewPagerDetail) ViewPager viewPagerDetail;
     @BindView(R.id.radio1) RadioButton radioButton1;
     @BindView(R.id.radio2) RadioButton radioButton2;
+    @BindView(R.id.meetTitle) TextView meetTitle;
+    @BindView(R.id.meetDescription) TextView meetDescription;
+    @BindView(R.id.meetInitDate) TextView meetInitDate;
+    @BindView(R.id.meetEndDate) TextView meetEndDate;
 
     private MeetDetailPresenter meetDetailPresenter;
 
@@ -34,9 +41,11 @@ public class MeetDetailActivity extends AppCompatActivity implements MeetDetailV
         ButterKnife.bind(this);
         this.getIntents();
 
-        this.meetDetailPresenter = new MeetDetailPresenter(this, new MeetDetailInteractor());
+        this.meetDetailPresenter = new MeetDetailPresenter(this);
         this.setupToolbar();
         this.setupViewPager();
+        this.setupRadioButtons();
+        this.setupInfo();
     }
 
     @Override
@@ -51,6 +60,12 @@ public class MeetDetailActivity extends AppCompatActivity implements MeetDetailV
     @Override
     public void setupViewPager() {
         this.meetDetailPresenter.setupViewPager(this.viewPagerDetail, getSupportFragmentManager(), meet, this);
+    }
+
+    @Override
+    public void setupRadioButtons(){
+        this.radioButton1.setOnClickListener(this);
+        this.radioButton2.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +86,14 @@ public class MeetDetailActivity extends AppCompatActivity implements MeetDetailV
     }
 
     @Override
+    public void setupInfo() {
+        this.meetTitle.setText(this.meet.getTitle());
+        this.meetDescription.setText(this.meet.getDescription());
+        this.meetInitDate.setText(this.meet.getInitDate());
+        this.meetEndDate.setText(this.meet.getEndDate());
+    }
+
+    @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
     }
@@ -85,10 +108,20 @@ public class MeetDetailActivity extends AppCompatActivity implements MeetDetailV
                 radioButton2.setChecked(true);
                 break;
         }
+
     }
 
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.radio1){
+            this.viewPagerDetail.setCurrentItem(0);
+        }else{
+            this.viewPagerDetail.setCurrentItem(1);
+        }
     }
 }

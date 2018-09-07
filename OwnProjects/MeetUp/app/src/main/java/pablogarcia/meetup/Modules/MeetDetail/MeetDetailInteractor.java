@@ -2,8 +2,11 @@ package pablogarcia.meetup.Modules.MeetDetail;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
+
+import com.google.android.gms.maps.MapFragment;
 
 import java.util.ArrayList;
 
@@ -12,7 +15,9 @@ import pablogarcia.meetup.Managers.ViewPagerManager.DetailViewPagerAdapter;
 import pablogarcia.meetup.Managers.ViewPagerManager.ViewPagerAdapter;
 import pablogarcia.meetup.Model.Meet;
 import pablogarcia.meetup.Modules.Fragments.DetailImage.DetailImageFragment;
+import pablogarcia.meetup.Modules.Fragments.DetailPlace.DetailPlaceFragment;
 import pablogarcia.meetup.Modules.Fragments.RecyclerView.RecyclerViewFragment;
+import pablogarcia.meetup.R;
 
 public class MeetDetailInteractor {
 
@@ -22,7 +27,7 @@ public class MeetDetailInteractor {
 
     }
 
-    DetailViewPagerAdapter detailViewPagerAdapter;
+    private DetailViewPagerAdapter detailViewPagerAdapter;
 
     public void onOptionItemSelected(MenuItem item, OnDetailListener listener){
 
@@ -38,7 +43,7 @@ public class MeetDetailInteractor {
         ArrayList<Fragment> fragments = new ArrayList<>();
 
         DetailImageFragment f1 = DetailImageFragment.newInstance(meet);
-        DetailImageFragment f2 = DetailImageFragment.newInstance(meet);
+        DetailPlaceFragment f2 = DetailPlaceFragment.newInstance(meet);
 
         fragments.add(f1);
         fragments.add(f2);

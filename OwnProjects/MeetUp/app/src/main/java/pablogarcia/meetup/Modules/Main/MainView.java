@@ -13,4 +13,12 @@ public interface MainView {
 
     void replaceFragment(Fragment fragment);
 
+    void navigateLogin();
+
+    void updateUserInfo();
+
+    void setUserImage(String image);
+
+    void setUserName(String name);
+
 }

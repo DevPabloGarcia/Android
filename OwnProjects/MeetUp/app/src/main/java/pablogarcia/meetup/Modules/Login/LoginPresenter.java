@@ -1,43 +1,39 @@
 package pablogarcia.meetup.Modules.Login;
 
-import android.util.Log;
 
-public class LoginPresenter implements LoginInteractor.OnLoginFinishedListener{
+import com.facebook.login.LoginResult;
 
-    LoginInteractor loginInteractor;
-    LoginView loginView;
+import pablogarcia.meetup.Managers.AuthManager.OnAuthListener;
 
-    public LoginPresenter(LoginInteractor loginInteractor, LoginView loginView) {
-        this.loginInteractor = loginInteractor;
+public class LoginPresenter implements OnAuthListener, LoginInteractor.OnLoginListener {
+
+    private LoginInteractor loginInteractor;
+    private LoginView loginView;
+
+    public LoginPresenter(LoginView loginView) {
+        this.loginInteractor = new LoginInteractor();
         this.loginView = loginView;
     }
 
-    public void login(String userName, String userPass){
-        loginInteractor.login(userName, userPass, this);
-    }
-
-
-    @Override
-    public void onSucces() {
-        loginView.navigateMainActivity();
+    public void checkUserLogged(){
+        this.loginInteractor.checkUserLogged(this);
     }
 
     @Override
-    public void onFail() {
-        Log.e("Error", "Something Wrong!");
+    public void onLoginSuccess(LoginResult loginResult) {
+        loginInteractor.handleFacebookAccessToken(loginResult, this);
     }
 
     @Override
-    public void onUserNameError() {
-        if(loginView != null){
-            loginView.showUserNameError();
-        }
+    public void onLoginFailure(String message) {
+        loginView.showToastMessage(message);
     }
 
     @Override
-    public void onUserPassError() {
-        if(loginView != null){
-            loginView.showUserPassError();
-        }
+    public void onLoginCancel() {}
+
+    @Override
+    public void onLoginComplete() {
+        this.loginView.navigateMainActivity();
     }
 }

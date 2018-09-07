@@ -18,7 +18,7 @@ public class RecyclerViewPresenter {
         this.recyclerViewInteractor = recyclerViewInteractor;
     }
 
-    public void onCreateView(RecyclerView recyclerView, Context context, ArrayList<Meet> meets, OnClickMeetRow listener){
-        this.recyclerViewInteractor.onCreateView(recyclerView, context, meets, listener);
+    public void onCreateView(RecyclerView recyclerView, Context context, boolean currentMeets, OnClickMeetRow listener){
+        this.recyclerViewInteractor.onCreateView(recyclerView, context, currentMeets, listener);
     }
 }

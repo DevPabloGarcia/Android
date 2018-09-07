@@ -11,9 +11,9 @@ public class MeetDetailPresenter implements MeetDetailInteractor.OnDetailListene
     private MeetDetailView meetDetailView;
     private MeetDetailInteractor meetDetailInteractor;
 
-    public MeetDetailPresenter(MeetDetailView meetDetailView, MeetDetailInteractor meetDetailInteractor) {
+    public MeetDetailPresenter(MeetDetailView meetDetailView) {
         this.meetDetailView = meetDetailView;
-        this.meetDetailInteractor = meetDetailInteractor;
+        this.meetDetailInteractor = new MeetDetailInteractor();
     }
 
     public void onOptionItemSelected(MenuItem item){
