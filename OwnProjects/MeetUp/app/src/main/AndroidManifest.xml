@@ -58,6 +58,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+        <activity android:name=".Modules.Register.RegisterActivity" />
         <activity android:name=".Modules.Main.MainActivity" />
         <activity android:name=".Modules.MeetDetail.MeetDetailActivity" />
         <activity android:name=".Modules.NewMeet.NewMeetActivity" />

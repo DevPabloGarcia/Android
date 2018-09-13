@@ -38,4 +38,6 @@
     <string name="init_date">Init Date</string>
     <string name="end_date">End Date</string>
     <string name="place">Place</string>
+    <string name="no_account">Dont you have and account?</string>
+    <string name="sing_up">Sing Up</string>
 </resources>

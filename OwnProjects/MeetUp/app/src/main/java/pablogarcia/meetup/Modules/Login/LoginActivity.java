@@ -13,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import pablogarcia.meetup.Managers.AuthManager.AuthManager;
 import pablogarcia.meetup.Modules.Main.MainActivity;
+import pablogarcia.meetup.Modules.Register.RegisterActivity;
 import pablogarcia.meetup.R;
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
@@ -52,6 +53,19 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     public void navigateMainActivity() {
         // Create a new intent instance
         Intent intent = new Intent(this, MainActivity.class);
+        // Navigate to the main activity
+        startActivity(intent);
+        // Show a translate animation
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    /**
+     * Navigate to the main activity
+     */
+    @Override
+    public void navigateRegisterActivity() {
+        // Create a new intent instance
+        Intent intent = new Intent(this, RegisterActivity.class);
         // Navigate to the main activity
         startActivity(intent);
         // Show a translate animation
@@ -99,6 +113,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     public void onClickButtonLogin(View view){
         // Navigate to the next view
         this.navigateMainActivity();
+    }
+
+    public void onClickButtonSingUp(View view){
+        this.navigateRegisterActivity();
     }
 
 }

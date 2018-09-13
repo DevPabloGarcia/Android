@@ -28,6 +28,7 @@ public class NewMeetInteractor{
 
     public NewMeetInteractor() {
         this.meet = new Meet();
+        this.meet.setOwner(ApiManager.getInstance().getCurrentUser());
     }
 
     public interface OnNewMeetListener{

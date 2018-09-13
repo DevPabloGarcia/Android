@@ -3,15 +3,19 @@ package pablogarcia.meetup.Model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+import java.util.UUID;
+
 public class User implements Parcelable {
 
     private String id;
     private String name;
-    private String surname;
+    private String pass;
     private String email;
     private String image;
 
     public User() {
+        this.id = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase();
     }
 
     public String getId() {
@@ -30,12 +34,12 @@ public class User implements Parcelable {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getPass() {
+        return pass;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     public String getEmail() {
@@ -62,19 +66,19 @@ public class User implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(name);
-        dest.writeString(surname);
-        dest.writeString(email);
-        dest.writeString(image);
+        dest.writeString(this.id);
+        dest.writeString(this.name);
+        dest.writeString(this.pass);
+        dest.writeString(this.email);
+        dest.writeString(this.image);
     }
 
     protected User(Parcel in) {
-        id = in.readString();
-        name = in.readString();
-        surname = in.readString();
-        email = in.readString();
-        image = in.readString();
+        this.id = in.readString();
+        this.name = in.readString();
+        this.pass = in.readString();
+        this.email = in.readString();
+        this.image = in.readString();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {

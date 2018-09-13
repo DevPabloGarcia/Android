@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.Collections;
 
 import pablogarcia.meetup.Model.Meet;
+import pablogarcia.meetup.Model.User;
 
 public class DatabaseManager {
 
@@ -24,6 +25,25 @@ public class DatabaseManager {
 
     public DatabaseManager() {
         this.firebaseDatabase = FirebaseDatabase.getInstance().getReference();
+    }
+
+    public void addUser(User user, final OnDatabaseSaveListener listener){
+        DatabaseReference meetUrl = this.firebaseDatabase.child("Users");
+        meetUrl.child(user.getId()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    listener.onSaveSuccess(task);
+                }else{
+                    listener.onSaveFailure(task.getException());
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onSaveFailure(e);
+            }
+        });
     }
 
     public void putMeet(Meet meet, final OnDatabaseSaveListener listener){

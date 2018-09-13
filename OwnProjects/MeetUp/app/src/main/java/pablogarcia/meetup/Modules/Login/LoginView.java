@@ -5,6 +5,8 @@ public interface LoginView {
 
     void navigateMainActivity();
 
+    void navigateRegisterActivity();
+
     void showToastMessage(String message);
 
     void setupFacebookLoginButton();

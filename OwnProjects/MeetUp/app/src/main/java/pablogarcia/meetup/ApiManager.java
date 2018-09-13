@@ -21,6 +21,7 @@ import pablogarcia.meetup.Managers.SessionManager.SessionManager;
 import pablogarcia.meetup.Managers.StorageManager.OnStorageListener;
 import pablogarcia.meetup.Managers.StorageManager.StorageManager;
 import pablogarcia.meetup.Model.Meet;
+import pablogarcia.meetup.Model.User;
 
 public class ApiManager {
 
@@ -86,6 +87,10 @@ public class ApiManager {
         this.storageManager.uploadMeetImage(imageBitmap, listener);
     }
 
+    public void addUser(User user, OnDatabaseSaveListener listener){
+        this.databaseManager.addUser(user, listener);
+    }
+
     public void putMeet(Meet meet, OnDatabaseSaveListener listener){
         this.databaseManager.putMeet(meet, listener);
     }
@@ -100,6 +105,10 @@ public class ApiManager {
 
     public void updateCurrentUser(FirebaseUser user){
         this.sessionManager.updateCurrentUser(user);
+    }
+
+    public User getCurrentUser(){
+        return this.sessionManager.getCurrentUser();
     }
 
     public void logOut(OnSessionListener listener){
