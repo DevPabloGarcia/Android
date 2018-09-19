@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DrawerLayout</string>
+    <string name="perfil">Perfil</string>
+    <string name="Profile">Profile</string>
+    <string name="Settings">Setting</string>
+    <string name="social">Social</string>
+    <string name="submenu">Submenu</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+</resources>

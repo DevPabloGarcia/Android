@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/Profile"
+            android:id="@+id/nav_profile"
+            android:checked="true">
+        </item>
+
+        <item
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/Settings"
+            android:id="@+id/nav_settings">
+        </item>
+
+        <item
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/social"
+            android:id="@+id/nav_social">
+        </item>
+
+    </group>
+
+    <item
+        android:title="@string/submenu">
+
+        <menu>
+
+            <item
+                android:title="@string/facebook"
+                android:id="@+id/nav_facebook"
+                >
+
+            </item>
+
+            <item
+                android:title="@string/twitter"
+                android:id="@+id/nav_twitter">
+            </item>
+
+        </menu>
+
+    </item>
+</menu>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppStart</string>
+    <string name="ClickMe">Click Me!</string>
+    <string name="textoSegundaActivity">Estamos en la segunda Activity</string>
+</resources>

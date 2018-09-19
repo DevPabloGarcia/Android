@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyAutoComplete" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+
+        <item name="colorControlActivated">#b63b1d</item>
+        <item name="colorControlNormal">#21a428</item>
+        <item name="android:background">#fff</item>
+
+    </style>
+
+</resources>

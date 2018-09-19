@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="hola">Hola!</string>
+    <string-array name="array">
+        <item>String 1</item><item>String 2</item>
+        <item>String 3</item><item>String 4</item>
+        <item>String 5</item><item>String 6</item>
+        <item>String 7</item><item>String 8</item>
+        <item>String 9</item><item>String 10</item>
+        <item>String 11</item><item>String 12</item>
+        <item>String 13</item><item>String 14</item>
+        <item>String 15</item><item>String 16</item>
+        <item>String 17</item><item>String 18</item>
+        <item>String 19</item><item>String 20</item>
+    </string-array>
+</resources>
