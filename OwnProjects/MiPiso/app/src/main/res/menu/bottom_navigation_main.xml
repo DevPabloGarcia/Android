@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tab_task"
+        android:enabled="true"
+        android:icon="@drawable/clipboard"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_paid"
+        android:enabled="true"
+        android:icon="@drawable/money"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_flat"
+        android:enabled="true"
+        android:icon="@drawable/building"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_settings"
+        android:enabled="true"
+        android:title=""
+        android:icon="@drawable/settings_gears"
+        app:showAsAction="ifRoom" />
+</menu>

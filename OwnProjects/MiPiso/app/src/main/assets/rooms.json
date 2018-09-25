@@ -1,0 +1,17 @@
+[
+  {
+    "id": "001",
+    "name": "Habitacion Grande",
+    "description": "Situada en medio de las otras dos habitaciones"
+  },
+  {
+    "id": "002",
+    "name": "Habitacion Pequeña",
+    "description": "Situada a la derecha del pasillo"
+  },
+  {
+    "id": "003",
+    "name": "Habitacion Mediana",
+    "description": "Situada a la izquierda de Pasillo"
+  }
+]

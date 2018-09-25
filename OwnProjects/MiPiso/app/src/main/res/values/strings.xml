@@ -1,11 +1,27 @@
 <resources>
     <string name="app_name">Mi Piso</string>
-    <string name="user">User</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
 
+    <string name="hint_user">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_confirm_pass">Confirmar Contraseña</string>
 
-    <string name="error_empty_fields">The fields are required</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">YfzGPR8U2OxX7OfO8fwE7DcydyqywhbkLn1PrYoD</string>
+    <string name="back4app_client_key">AgdqRetlgMBHe6DnTWp5J2Mn0jOivPsJfvDu6knv</string>
 
+    <string name="text_not_registered_yet">No tienes cuenta?</string>
+    <string name="text_no_flat_yet">No tienes piso aun?</string>
+    <string name="text_next_task">Tarea:</string>
+    <string name="text_next_paid">Pago: </string>
+    <string name="text_o">O</string>
+
+    <string name="button_ok">Ok</string>
+    <string name="button_register">Registrate</string>
+    <string name="buton_login">Entrar</string>
+    <string name="button_search_flat">Buscar Piso</string>
+    <string name="button_create_flat">Crear Piso</string>
+
+    <string name="error_empty_fields">Los campos son obligatorios</string>
+    <string name="error_pass_confirm">Las contraseñas no coinciden</string>
 
 </resources>

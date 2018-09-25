@@ -1,0 +1,17 @@
+[
+  {
+    "id":"00001",
+    "name" : "Cocina",
+    "description" : "Fregar la encimera, Guardar los platos, vasos etc, limpiar microondas."
+  },
+  {
+    "id":"00002",
+    "name" : "Baño",
+    "description" : "Limpiar espejo, Fregar el suelo, el inhodoro y el lavabo."
+  },
+  {
+    "id":"00003",
+    "name" : "Salon",
+    "description" : "Pasar el polvo, limpiar ambas mesas y estanterias, y barrer y fregar el suelo."
+  }
+]

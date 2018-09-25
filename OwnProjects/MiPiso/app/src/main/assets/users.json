@@ -1,0 +1,154 @@
+[
+    {
+      "id": "00001",
+      "name": "Pablo",
+      "surname": "Garcia Nuñez",
+      "phone": "618426962",
+      "type": "TENANT",
+      "image" : "https://image.flaticon.com/icons/png/512/190/190657.png",
+      "currentTask": {
+        "id":"00001",
+        "name" : "Cocina",
+        "description" : "Fregar la encimera, Guardar los platos, vasos etc, limpiar microondas.",
+        "done" : false
+      },
+      "room": {
+        "id": "001",
+        "name": "Habitacion Grande",
+        "description": "Situada en medio de las otras dos habitaciones"
+      },
+      "paids": [
+        {
+          "id": "00001",
+          "amount": "3.10",
+          "user": "00001",
+          "items": "Papel Higienico",
+          "date": "13/07/2018"
+        },
+        {
+          "id": "00002",
+          "amount": "2.0",
+          "user": "00001",
+          "items": "Servilletas",
+          "date": "14/07/2018"
+        },
+        {
+          "id": "00003",
+          "amount": "1.15",
+          "user": "00001",
+          "items": "Cristasol",
+          "date": "17/07/2018"
+        }
+      ],
+      "nextPaid": "390"
+    },
+    {
+      "id": "00002",
+      "name": "Marcos",
+      "surname": "Garcia Liras",
+      "phone": "618426962",
+      "image" : "https://www.shareicon.net/data/2016/08/18/810214_user_512x512.png",
+      "type": "TENANT",
+      "currentTask": {
+        "id":"00002",
+        "name" : "Baño",
+        "description" : "Limpiar espejo, Fregar el suelo, el inhodoro y el lavabo.",
+        "done" : false
+      },
+      "room": {
+        "id": "002",
+        "name": "Habitacion Pequeña",
+        "description": "Situada a la derecha del pasillo"
+      },
+      "paids": [
+        {
+          "id": "00004",
+          "amount": "10.50",
+          "user": "00001",
+          "items": "Estropajos, Detergente, Suavizante",
+          "date": "04/08/2018"
+        },
+        {
+          "id": "00005",
+          "amount": "4.8",
+          "user": "00002",
+          "items": "Fregasuelos",
+          "date": "13/08/2018"
+        },
+        {
+          "id": "00009",
+          "amount": "8.76",
+          "user": "00002",
+          "items": "Limpia Muebles, Tapa Microondas",
+          "date": "06/09/2018"
+        },
+        {
+          "id": "00010",
+          "amount": "6.3",
+          "user": "00003",
+          "items": "Ambientador Cocina, Balletas",
+          "date": "10/09/2018"
+        },
+        {
+          "id": "00011",
+          "amount": "1.9",
+          "user": "00003",
+          "items": "Cepillo de Barrer",
+          "date": "14/09/2018"
+        }
+      ],
+      "nextPaid": "400"
+    },
+    {
+      "id": "00003",
+      "name": "Victor",
+      "surname": "Santa Maria",
+      "image" : "https://image.flaticon.com/icons/png/512/190/190674.png",
+      "phone": "618426962",
+      "type": "TENANT",
+      "currentTask": {
+        "id":"00003",
+        "name" : "Salon",
+        "description" : "Pasar el polvo, limpiar ambas mesas y estanterias, y barrer y fregar el suelo.",
+        "done" : true
+      },
+      "room": {
+        "id": "003",
+        "name": "Habitacion Mediana",
+        "description": "Situada a la izquierda de Pasillo"
+      },
+      "paids": [
+        {
+          "id": "00006",
+          "amount": "1.14",
+          "user": "00002",
+          "items": "Ambientador",
+          "date": "20/08/2018"
+        },
+        {
+          "id": "00007",
+          "amount": "3.0",
+          "user": "00002",
+          "items": "Papel Higienico",
+          "date": "01/09/2018"
+        },
+        {
+          "id": "00008",
+          "amount": "12.56",
+          "user": "00003",
+          "items": "Papel Cocina, Utensilios Cocina",
+          "date": "06/09/2018"
+        },
+        {
+          "id": "00012",
+          "amount": "2.8",
+          "user": "00001",
+          "items": "Papel Mopa",
+          "date": "19/09/2018"
+        }
+      ],
+      "nextPaid": "380"
+    }
+  ]
+
+

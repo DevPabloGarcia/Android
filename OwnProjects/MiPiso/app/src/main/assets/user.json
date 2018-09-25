@@ -1,0 +1,46 @@
+{
+  "id": "00001",
+  "name": "Pablo",
+  "surname": "Garcia Nuñez",
+  "phone": "618426962",
+  "type": "TENANT",
+  "image": "https://image.flaticon.com/icons/png/512/190/190657.png",
+  "flat": {
+    "id": "00001"
+  },
+  "currentTask": {
+    "id": "00001",
+    "name": "Cocina",
+    "description": "Fregar la encimera, Guardar los platos, vasos etc, limpiar microondas.",
+    "done": false
+  },
+  "room": {
+    "id": "001",
+    "name": "Habitacion Grande",
+    "description": "Situada en medio de las otras dos habitaciones"
+  },
+  "paids": [
+    {
+      "id": "00001",
+      "amount": "3.10",
+      "user": "00001",
+      "items": "Papel Higienico",
+      "date": "13/07/2018"
+    },
+    {
+      "id": "00002",
+      "amount": "2.0",
+      "user": "00001",
+      "items": "Servilletas",
+      "date": "14/07/2018"
+    },
+    {
+      "id": "00003",
+      "amount": "1.15",
+      "user": "00001",
+      "items": "Cristasol",
+      "date": "17/07/2018"
+    }
+  ],
+  "nextPaid": "390"
+}
